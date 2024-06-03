@@ -73,21 +73,33 @@ require(['js/qlik'], function (qlik) {
         noInteraction: false,
     });
 
-    JiraApp.getObject('print-button', 'knpwAG', {
+    JiraApp.getObject('update-table', '74bba754-a43f-47bb-902f-f4f645aace1c', {
+        noInteraction: false,
+    });
+
+    JiraApp.getObject('print-button', 'xrwamkt', {
         noInteraction: false,
     });
 
     $('#gantt-chart').addClass('loading');
+    $('#update-table').addClass('loading');
 
     setInterval(() => {
-        const buttonElements = $('#knpwAG_content button');
-        const headerElement = $('header#knpwAG_title');
+        const buttonElements = $('#xrwamkt_content button');
+        const headerElement = $('header#xrwamkt_title');
         const ganttChartElement = $('#nMpQZM_content');
+        const updateTableElement = $(
+            '#74bba754-a43f-47bb-902f-f4f645aace1c_content'
+        );
 
         console.log('headerElement: ', headerElement);
 
         if (ganttChartElement.length) {
             $('#gantt-chart').removeClass('loading');
+        }
+
+        if (updateTableElement.length) {
+            $('#update-table').removeClass('loading');
         }
 
         if (headerElement.length) {

@@ -124,6 +124,13 @@
     align-items: center;
 }
 
+#update-table {
+    height: 860px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
 #print-button {
     /* height: 100%; */
     height: 38px;
